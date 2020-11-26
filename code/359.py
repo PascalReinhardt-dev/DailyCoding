@@ -70,26 +70,29 @@ def anagrammToNumber(anagram):
         "ILen": 4
     }
 
-    numbers = [DOne, DTwo, DThree, DFour, Dfive,
-               DSix, Dseven, DEight, DNine, DZero]
-
+    numbers = [DZero, DOne, DTwo, DThree, DFour, Dfive,
+               DSix, Dseven, DEight, DNine]
+    oldAnagram = ""
     for number in numbers:
-        for char in number.get("SNumber"):
-            if char in anagram:
-                counter += 1
-
-        if counter == number.get("ILen"):
-            realNumber += str(number.get("INumber"))
-            anagram = removeLettersFromString(anagram,number.get("SNumber"))
-        counter = 0
+        condition = True
+        while condition:
+            for char in number.get("SNumber"):
+                if char in anagram:
+                    counter += 1
+            condition = False
+            if counter == number.get("ILen"):
+                realNumber += str(number.get("INumber"))
+                anagram = removeLettersFromString(anagram,number.get("SNumber"))
+                condition = True
+            counter = 0
 
     if len(anagram) == 0:
         return realNumber
     else:
-        return
+        print(anagram)
 
-anagram = "niesevehrtfeev"
-anagram = "eightninesveenwtonoefviehteerxisrouf"
+anagram = "niesevehrtfeevfive"
+anagram = "oentrheeisxevenseerthinenzero"
 
 
 print(anagrammToNumber(anagram))
