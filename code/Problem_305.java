@@ -10,7 +10,7 @@ package code;
 
 import java.util.LinkedList;
 
-public class P305 {
+public class Problem_305 {
     public static void main(String[] args) {
 
         int[] integers = {3, 4, -7, 5, -5523, -6, 6}; //{ 3, 4, -7, 5, 7, -6, 6 };

@@ -72,7 +72,6 @@ def anagrammToNumber(anagram):
 
     numbers = [DZero, DOne, DTwo, DThree, DFour, Dfive,
                DSix, Dseven, DEight, DNine]
-    oldAnagram = ""
     for number in numbers:
         condition = True
         while condition:
@@ -85,6 +84,7 @@ def anagrammToNumber(anagram):
                 anagram = removeLettersFromString(anagram,number.get("SNumber"))
                 condition = True
             counter = 0
+        
 
     if len(anagram) == 0:
         return realNumber
@@ -93,6 +93,7 @@ def anagrammToNumber(anagram):
 
 anagram = "niesevehrtfeevfive"
 anagram = "oentrheeisxevenseerthinenzero"
+anagram = "threesevenfoursixtwo"
 
 
 print(anagrammToNumber(anagram))
