@@ -79,4 +79,4 @@ def solveAnagram(anagram):
 # anagram = "fivezerotwo"
 
 # print(solveAnagram("threesevenfoursixtwooneone"))
-# print(solveAnagramJenna("fourthreeone"))
+print(solveAnagramJenna("threesevenfoursixtwo"))

@@ -14,7 +14,7 @@ class Test359_recursiv(unittest.TestCase):
 
     def test_solveAnagram(self):
 
-        for a in range(0, 10 ** 2):
+        for a in range(0, 10 ** 5):
             anagram = ''
             number = []
             for x in random.sample(range(0, 9), 3):
